@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Pink. Конкурс на самое безбашенное путешествие с Pink</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="main-nav  main-nav--closed">
+        <div class="main-nav__menu">
+          <a class="logo  logo--header" href="index.html">
+            <img src="img/logo.svg" width="55" height="55" alt="Pink">
+          </a>
+          <a class="main-nav__toggle">Открыть меню</a>
+        </div>
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Фотографии</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Конкурс</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="promo  promo--form">
+      <h1 class="promo__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+    </section>
+    <section class="form">
+      <h2 class="visually-hidden">Заполните форму ниже:</h2>
+      <p class="form__descr">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+      <form class="form__form" action="#" method="POST"></form>
+        <fieldset class="form__name">
+          <legend class="visually-hidden">Укажите ваше ФИО:</legend>
+          <label for="name">Фамилия</label>
+          <input type="text" name="name" id="name">
+          <label for="surname">Имя</label>
+          <input type="text" name="surname" id="surname">
+          <label for="patronymic">Отчество</label>
+          <input type="text" name="patronymic" id="patronymic">
+        </fieldset>
+        <fieldset class="form__achievments">
+          <legend class="fomr__title">Ваши безбашенные достижения в путешествии</legend>
+          <input type="checkbox" name="achiev-1" id="achieve-1">
+          <label for="achieve-1">Сделал селфи с акулой</label>
+          <input type="checkbox" name="achiev-2" id="achieve-2">
+          <label for="achieve-2">Обгорел на пляже</label>
+          <input type="checkbox" name="achiev-3" id="achieve-3">
+          <label for="achieve-3">Видел Чака Норриса</label>
+          <input type="checkbox" name="achiev-4" id="achieve-4">
+          <label for="achieve-4">Накупил Сувениров</label>
+          <input type="checkbox" name="achiev-5" id="achieve-5">
+          <label for="achieve-5">Удержал башню</label>
+          <input type="checkbox" name="achiev-6" id="achieve-6">
+          <label for="achieve-6">Разгромил отель</label>
+        </fieldset>
+        <fieldset class="form__contacts">
+          <legend class="form__title">Контактная информация</legend>
+          <label for="tel">
+            <span class="form__contacts-field  form__contacts-field--desktop">Номер телефона</span>
+            <span class="form__contacts-field  form__contacts-field--mobile">Номерок телефончика</span>
+            <input type="tel" name="tel" id="tel" placeholder="+7 XXX XXX-XX-XX">
+          </label>
+          <label for="email">
+            <span class="form__contacts-field  form__contacts-field--desktop">Адрес почты</span>
+            <span class="form__contacts-field  form__contacts-field--mobile">Адресок почты</span>
+            <input type="email" name="email" id="email" placeholder="Введите почту">
+          </label>
+        </fieldset>
+        <fieldset class="form__apps">
+          <legend class="form__title">С каким приложением путешествовали?</legend>
+          <input type="radio" name="apps" id="ios">
+          <label for="ios">Pink для iOS</label>
+          <input type="radio" name="apps" id="android">
+          <label for="android">Pink на Android</label>
+          <input type="radio" name="apps" id="windows">
+          <label for="windows">Windows Phone</label>
+        </fieldset>
+        <fieldset class="form__emotions">
+          <legend class="form__title">Опишите ваши эмоции</legend>
+          <textarea name="emotion" id="emotion" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        </fieldset>
+        <div class="form__button-wrapper">
+          <button type="submit">Отправить форму</button>
+          <small class="form__small"><sup>*</sup>Обязательные поля</small>
+        </div>
+    </section>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a class="logo  logo--footer" href="index.html">
+          <img src="img/logo.svg" width="55" height="55" alt="Pink">
+        </a>
+        <p class="page-footer__socials">
+          <a class="social-btn  social-btn--twitter" href="#"><span class="visually-hidden">Наш Твиттер</span></a>
+          <a class="social-btn  social-btn--facebook" href="#"><span class="visually-hidden">Наш Фейсбук</span></a>
+          <a class="social-btn  social-btn--youtube" href="#"><span class="visually-hidden">Наш канал на YouTube</span></a>
+        </p>
+        <p class="page-footer__copyright">
+          Разработано
+          <a class="footer__copyright-link" href="#"><span class="visually-hidden">в HTML Academy</span></a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
