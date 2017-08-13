@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Pink. Фотографии пользователей</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="page-header">      
+      <nav class="main-nav  main-nav--closed">
+        <div class="main-nav__menu">
+          <a class="logo  logo--header" href="index.html">
+            <img src="img/logo.svg" width="55" height="55" alt="Pink">
+          </a>
+          <a class="main-nav__toggle">Открыть меню</a>
+        </div>       
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Фотографии</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Конкурс</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
+        </ul>       
+      </nav>
+    </header>
+    <section class="promo  promo--photo">
+      <h1 class="promo__title">Фотографии пользователей</h1>
+    </section>
+    <section class="photo-content">
+      <h2 class="photo-content__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
+      <ul class="photo-content__list">
+        <li class="photo-content__item  blog-post  blog-post--panorama">
+          <div class="blog-post__inner">
+            <p class="blog-post__author">Анна</p>
+            <time datetime="2017-07-28">5 минут назад</time>            
+            <p class="blog-post__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
+            <div class="blog-post__likes">
+              <p>Нравится: <span>215</span></p>
+              <form class="blog-post__likes-form" action="#" method="POST">
+                <input type="checkbox" name="like" id="like">
+                <label for="like">Like</label>
+              </form>
+            </div>
+          </div>
+          <img class="blog-post__photo" src="#" alt="Панорама">
+        </li>
+        <li class="photo-content__item  blog-post">
+          <p class="blog-post__author">Левон</p>
+          <time class="blog-post__time" datetime="2017-07-28">5 часов назад</time>          
+          <p class="blog-post__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+          <div class="blog-post__likes">
+            <p>Нравится: <span>356</span></p>
+            <a href="#">Like</a>
+          </div>
+          <img class="blog-post__photo" src="#" alt="Фото">
+        </li>
+        <li class="photo-content__item  blog-post">
+          <p class="blog-post__author">Антон</p>
+          <time class="blog-post__time" datetime="2017-07-27">12 часов назад</time>          
+          <p class="blog-post__comment">Соседи будут рады!</p>
+          <div class="blog-post__likes">
+            <p>Нравится: <span>666</span></p>
+            <a href="#">Like</a>
+          </div>
+          <img class="blog-post__photo" src="#" alt="Фото">
+        </li>
+        <li class="photo-content__item  blog-post">
+          <p class="blog-post__author">Борис</p>
+          <time class="blog-post__time" datetime="2017-07-27">20 часов назад</time>          
+          <p class="blog-post__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
+          <div class="blog-post__likes">
+            <p>Нравится: <span>215</span></p>
+            <a href="#">Like</a>
+          </div>
+          <img class="blog-post__photo" src="#" alt="Фото">
+        </li>
+        <li class="photo-content__item  blog-post">
+          <p class="blog-post__author">Сергей</p>
+          <time class="blog-post__time" datetime="2017-07-27">25 часов назад</time>          
+          <p class="blog-post__comment">Самая кубанская в мире!</p>
+          <div class="blog-post__likes">
+            <p>Нравится: <span>4</span></p>
+            <a href="#">Like</a>
+          </div>
+          <img class="blog-post__photo" src="#" alt="Фото">
+        </li>
+        <li class="photo-content__item  blog-post">
+          <p class="blog-post__author">Максим</p>
+          <time class="blog-post__time" datetime="2017-07-26">40 часов назад</time>          
+          <p class="blog-post__comment">Где снег-то?</p>
+          <div class="blog-post__likes">
+            <p>Нравится: <span>150</span></p>
+            <a href="#">Like</a>
+          </div>
+          <img class="blog-post__photo" src="#" alt="Фото">
+        </li>
+        <li class="photo-content__item  blog-post">
+          <p class="blog-post__author">Надежда</p>
+          <time class="blog-post__time" datetime="2017-07-26">45 часов назад</time>          
+          <p class="blog-post__comment">Всем GM и взаимные лайки!</p>
+          <div class="blog-post__likes">
+            <p>Нравится: <span>2560</span></p>
+            <a href="#">Like</a>
+          </div>
+          <img class="blog-post__photo" src="#" alt="Фото">
+        </li>
+      </ul>
+    </section>
+    <section class="upload">
+      <div class="upload__wrapper">
+        <h2 class="upload__title">Затмите их всех! 
+        Выкладывайте все, что накопилось в телефоне!
+        </h2>
+        <div class="upload__form-wrapper">
+          <img class="upload__img" src="#" alt="Ваше фото">          
+          <form class="upload__form" action="#" method="POST">
+            <fieldset class="upload__filters">
+            <legend class="visually-hidden">Фильтры</legend>
+              <div class="upload__filter-toggle">
+                <input type="radio" name="toggle" id="toggle-crop">
+                <label for="toggle-crop"></label>            
+                <input type="radio" name="toggle" id="toggle-fill">
+                <label for="toggle-fill"></label>            
+                <input type="radio" name="toggle" id="toggle-contrast">
+                <label for="toggle-contrast"></label>            
+              </div>
+              <ul class="upload__controls-list">
+                <li class="upload__controls-item  upload__controls-item--crop">
+                  <div class="upload__range-scale"><div class="upload__range-bar"></div></div>
+                </li>
+                <li class="upload__controls-item  upload__controls-item--fill">
+                  <div class="upload__range-scale"><div class="upload__range-bar"></div></div>
+                </li>
+                <li class="upload__controls-item  upload__controls-item--contrast">
+                  <div class="upload__range-scale"><div class="upload__range-bar"></div></div>
+                </li>
+              </ul>
+            </fieldset>
+            <div class="upload__buttons-wrapper">
+              <button type="submit">Запостить</button>
+              <button type="reset">Отмена</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a class="logo  logo--footer" href="index.html">
+          <img src="img/logo.svg" width="55" height="55" alt="Pink">
+        </a>
+        <p class="page-footer__socials">
+          <a class="social-btn  social-btn--twitter" href="#"><span class="visually-hidden">Наш Твиттер</span></a>
+          <a class="social-btn  social-btn--facebook" href="#"><span class="visually-hidden">Наш Фейсбук</span></a>
+          <a class="social-btn  social-btn--youtube" href="#"><span class="visually-hidden">Наш канал на YouTube</span></a>
+        </p>
+        <p class="page-footer__copyright">
+          Разработано
+          <a class="footer__copyright-link" href="#"><span class="visually-hidden">в HTML Academy</span></a>
+        </p>        
+      </div>
+    </footer>
+  </body>
+</html>
