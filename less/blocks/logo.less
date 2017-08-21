@@ -1,0 +1,46 @@
+.logo {
+  outline: none;
+}
+
+svg {
+  transition: fill 0.1s linear, opacity 0.1s linear;
+
+  fill: @white;
+}
+
+.logo svg {
+  &:hover,
+  &:focus {
+    fill: @lipstick;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.logo-pink-white-tablet,
+.logo-pink-white-desktop {
+  display: none;
+}
+
+@media @tablet-widths {
+  .logo-pink-white-mobile,
+  .logo-pink-white-desktop {
+    display: none;
+  }
+
+  .logo-pink-white-tablet {
+    display: block;
+  }
+}
+
+@media @desktop-widths {
+  .logo-pink-white-mobile,
+  .logo-pink-white-tablet {
+    display: none;
+  }
+
+  .logo-pink-white-desktop {
+    display: block;
+  }
+}
