@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pink</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -193,50 +194,58 @@
       </nav>
     </header>
     <section class="promo">
-      <div class="promo__header">
-        <h2 class="promo__title  intro__title--hidden">Взгляните на жизнь ярче</h2>
-      </div>
-      <div class="promo__download">
-        <a class="promo__btn  btn" href="#">Скачать приложение</a>
-        <ul class="promo__download-list">
-          <li class="promo__download-item"><a class="promo__download-link" href="#"><img src="img/#.png" width="55" height="55" alt="скачать на iOS"></a></li>
-          <li class="promo__download-item"><a class="promo__download-link" href="#"><img src="img/#.png" width="55" height="55" alt="скачать на Android"></a></li>
-          <li class="promo__download-item"><a class="promo__download-link" href="#"><img src="img/#.png" width="55" height="55" alt="скачать на Windows Phone"></a></li>
-        </ul>
-        <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      <div class="promo__wrapper">
+        <h2 class="promo__title">Взгляните на жизнь ярче</h2>
+        <div class="promo__download">
+          <a class="promo__btn  btn" href="#">Скачать приложение</a>
+          <ul class="promo__download-list">
+            <li class="promo__download-item"><a class="promo__download-link" href="#"><img src="img/logo-apple.svg" width="47" height="56" alt="скачать на iOS"></a></li>
+            <li class="promo__download-item"><a class="promo__download-link" href="#"><img src="img/logo-android.svg" width="43" height="47" alt="скачать на Android"></a></li>
+            <li class="promo__download-item"><a class="promo__download-link" href="#"><img src="img/logo-microsoft.svg" width="44" height="41" alt="скачать на Windows Phone"></a></li>
+          </ul>
+          <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
       </div>
     </section>
     <section class="features">
       <h2 class="features__title  visually-hidden">Особенности приложения:</h2>
-      <p class="features__intro">Устали от серости мегаполиса? Нам есть, что вам предложить!</p>
-      <ul class="features__list">
-        <li class="features__item">
-          <h3 class="features__item-title">Поднимает настроение</h3>
-          <p class="features__descr">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов</p>
-        </li>
-        <li class="features__item">
-          <h3 class="features__item-title">Меняет мир вокруг</h3>
-          <p class="features__descr">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-        </li>
-        <li class="features__item">
-          <h3 class="features__item-title">Заводит новых друзей</h3>
-          <p class="features__descr">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-        </li>
-      </ul>
-      <div class="features__research">
-        <h3 class="features__research-title">Эффект на 24 часа!</h3>
-        <p class="features__research-descr">Британские ученые провели исследования и доказали,
+      <div class="features__intro">
+        <p>Устали от серости мегаполиса?</p>
+        <p>Нам есть, что вам<br> предложить!</p>
+      </div>
+      <div class="features__list-wrapper">
+        <ul class="features__list">
+          <li class="features__item  features__item--monochrome">
+            <h3 class="features__item-title">Поднимает настроение</h3>
+            <p class="features__descr">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов</p>
+          </li>
+          <li class="features__item  features__item--colorful">
+            <h3 class="features__item-title">Меняет мир вокруг</h3>
+            <p class="features__descr">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </li>
+          <li class="features__item  features__item--smile">
+            <h3 class="features__item-title">Заводит новых друзей</h3>
+            <p class="features__descr">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="research">
+      <h2 class="visually-hidden">Результаты исследования</h2>
+      <div class="research__wrapper">
+        <h3 class="research__title">Эффект на 24 часа!</h3>
+        <p class="research__descr">Британские ученые провели исследования и доказали,
         что положительный эффект от использования приложения длится целые сутки!</p>
-        <a class="features__research-link" href="#">Узнать больше об исследовании</a>
+        <a class="research__link" href="#">Узнать больше об исследовании</a>
       </div>
     </section>
     <section class="reviews">
-      <div class="reviews__wrapper  slider">
+      <div class="reviews__wrapper">
         <h2 class="reviews__title  visually-hidden">Комментарии пользователей:</h2>
-        <input class="slider__input" type="radio" name="reviews" id="reviews-input-1" checked>
-        <input class="slider__input" type="radio" name="reviews" id="reviews-input-2">
-        <input class="slider__input" type="radio" name="reviews" id="reviews-input-3">
-        <ul class="reviews__list">
+        <input class="slider__input" type="radio" name="reviews" id="slider-input-1" checked>
+        <input class="slider__input" type="radio" name="reviews" id="slider-input-2">
+        <input class="slider__input" type="radio" name="reviews" id="slider-input-3">
+        <ul class="reviews__list  slider">
           <li class="reviews__item  slider__item">
             <p class="reviews__author-name">Николай Петров</p>
             <p class="reviews__author-info">25 лет, водитель трамвая</p>
@@ -245,7 +254,7 @@
           <li class="reviews__item  slider__item">
             <p class="reviews__author-name">Николай Петров</p>
             <p class="reviews__author-info">25 лет, водитель трамвая</p>
-            <p class="reviews__comment">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            <p class="reviews__comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur deleniti assumenda impedit quibusdam unde eos eius, distinctio mollitia culpa, nesciunt officia totam repudiandae? Dolor adipisci sit quo voluptatem deleniti, pariatur.</p>
           </li>
           <li class="reviews__item  slider__item">
             <p class="reviews__author-name">Николай Петров</p>
@@ -253,6 +262,11 @@
             <p class="reviews__comment">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </li>
         </ul>
+        <div class="slider__toggles">
+          <label class="slider__toggle" for="slider-input-1"></label>
+          <label class="slider__toggle" for="slider-input-2"></label>
+          <label class="slider__toggle" for="slider-input-3"></label>
+        </div>
       </div>
     </section>
     <section class="price">
