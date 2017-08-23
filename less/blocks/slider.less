@@ -1,24 +1,39 @@
-.slider__input {
-  display: none;
-}
-
 .slider__toggles {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  width: 62px;
+  margin: 0 auto;
 }
 
 .slider__toggle {
-  box-sizing: border-box;
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
 
-  font-size: 0;
-
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 1);
-  transform: rotate(45deg);
+  background-color: #c2c6ca;
+  background-clip: content-box;
+  border: 3px solid transparent;
+  border-radius: 50%;
   cursor: pointer;
+}
 
-  transition: background-color 0.2s linear;
+.slider__item {
+  display: none;
+}
+
+#slider-input-1:checked ~ .slider__toggles label[for="slider-input-1"],
+#slider-input-2:checked ~ .slider__toggles label[for="slider-input-2"],
+#slider-input-3:checked ~ .slider__toggles label[for="slider-input-3"] {
+  border-color: #283645;
+}
+
+#slider-input-1:checked ~ .slider .slider__item:nth-child(1),
+#slider-input-2:checked ~ .slider .slider__item:nth-child(2),
+#slider-input-3:checked ~ .slider .slider__item:nth-child(3) {
+  display: flex;
+}
+
+@media @desktop-widths {
+  .slider__toggles {
+    display: none;
+  }
 }

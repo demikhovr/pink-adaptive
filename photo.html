@@ -2,25 +2,26 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pink. Фотографии пользователей</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">      
+    <header class="page-header">
       <nav class="main-nav  main-nav--closed">
         <div class="main-nav__menu">
           <a class="logo  logo--header" href="index.html">
             <img src="img/logo.svg" width="55" height="55" alt="Pink">
           </a>
           <a class="main-nav__toggle">Открыть меню</a>
-        </div>       
+        </div>
         <ul class="main-nav__list">
           <li class="main-nav__item"><a class="main-nav__link" href="#">Главная</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="#">Фотографии</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="#">Конкурс</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
-        </ul>       
+        </ul>
       </nav>
     </header>
     <section class="promo  promo--photo">
@@ -32,7 +33,7 @@
         <li class="photo-content__item  blog-post  blog-post--panorama">
           <div class="blog-post__inner">
             <p class="blog-post__author">Анна</p>
-            <time datetime="2017-07-28">5 минут назад</time>            
+            <time datetime="2017-07-28">5 минут назад</time>
             <p class="blog-post__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
             <div class="blog-post__likes">
               <p>Нравится: <span>215</span></p>
@@ -46,7 +47,7 @@
         </li>
         <li class="photo-content__item  blog-post">
           <p class="blog-post__author">Левон</p>
-          <time class="blog-post__time" datetime="2017-07-28">5 часов назад</time>          
+          <time class="blog-post__time" datetime="2017-07-28">5 часов назад</time>
           <p class="blog-post__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
           <div class="blog-post__likes">
             <p>Нравится: <span>356</span></p>
@@ -56,7 +57,7 @@
         </li>
         <li class="photo-content__item  blog-post">
           <p class="blog-post__author">Антон</p>
-          <time class="blog-post__time" datetime="2017-07-27">12 часов назад</time>          
+          <time class="blog-post__time" datetime="2017-07-27">12 часов назад</time>
           <p class="blog-post__comment">Соседи будут рады!</p>
           <div class="blog-post__likes">
             <p>Нравится: <span>666</span></p>
@@ -66,7 +67,7 @@
         </li>
         <li class="photo-content__item  blog-post">
           <p class="blog-post__author">Борис</p>
-          <time class="blog-post__time" datetime="2017-07-27">20 часов назад</time>          
+          <time class="blog-post__time" datetime="2017-07-27">20 часов назад</time>
           <p class="blog-post__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
           <div class="blog-post__likes">
             <p>Нравится: <span>215</span></p>
@@ -76,7 +77,7 @@
         </li>
         <li class="photo-content__item  blog-post">
           <p class="blog-post__author">Сергей</p>
-          <time class="blog-post__time" datetime="2017-07-27">25 часов назад</time>          
+          <time class="blog-post__time" datetime="2017-07-27">25 часов назад</time>
           <p class="blog-post__comment">Самая кубанская в мире!</p>
           <div class="blog-post__likes">
             <p>Нравится: <span>4</span></p>
@@ -86,7 +87,7 @@
         </li>
         <li class="photo-content__item  blog-post">
           <p class="blog-post__author">Максим</p>
-          <time class="blog-post__time" datetime="2017-07-26">40 часов назад</time>          
+          <time class="blog-post__time" datetime="2017-07-26">40 часов назад</time>
           <p class="blog-post__comment">Где снег-то?</p>
           <div class="blog-post__likes">
             <p>Нравится: <span>150</span></p>
@@ -96,7 +97,7 @@
         </li>
         <li class="photo-content__item  blog-post">
           <p class="blog-post__author">Надежда</p>
-          <time class="blog-post__time" datetime="2017-07-26">45 часов назад</time>          
+          <time class="blog-post__time" datetime="2017-07-26">45 часов назад</time>
           <p class="blog-post__comment">Всем GM и взаимные лайки!</p>
           <div class="blog-post__likes">
             <p>Нравится: <span>2560</span></p>
@@ -108,21 +109,21 @@
     </section>
     <section class="upload">
       <div class="upload__wrapper">
-        <h2 class="upload__title">Затмите их всех! 
+        <h2 class="upload__title">Затмите их всех!
         Выкладывайте все, что накопилось в телефоне!
         </h2>
         <div class="upload__form-wrapper">
-          <img class="upload__img" src="#" alt="Ваше фото">          
+          <img class="upload__img" src="#" alt="Ваше фото">
           <form class="upload__form" action="#" method="POST">
             <fieldset class="upload__filters">
             <legend class="visually-hidden">Фильтры</legend>
               <div class="upload__filter-toggle">
                 <input type="radio" name="toggle" id="toggle-crop">
-                <label for="toggle-crop"></label>            
+                <label for="toggle-crop"></label>
                 <input type="radio" name="toggle" id="toggle-fill">
-                <label for="toggle-fill"></label>            
+                <label for="toggle-fill"></label>
                 <input type="radio" name="toggle" id="toggle-contrast">
-                <label for="toggle-contrast"></label>            
+                <label for="toggle-contrast"></label>
               </div>
               <ul class="upload__controls-list">
                 <li class="upload__controls-item  upload__controls-item--crop">
@@ -157,7 +158,7 @@
         <p class="page-footer__copyright">
           Разработано
           <a class="footer__copyright-link" href="#"><span class="visually-hidden">в HTML Academy</span></a>
-        </p>        
+        </p>
       </div>
     </footer>
   </body>
