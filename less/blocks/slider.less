@@ -1,3 +1,7 @@
+.slider__input {
+  display: none;
+}
+
 .slider__toggles {
   display: flex;
   justify-content: space-between;
@@ -16,6 +20,11 @@
   cursor: pointer;
 }
 
+.slider__prev,
+.slider__next {
+  display: none;
+}
+
 .slider__item {
   display: none;
 }
@@ -32,8 +41,61 @@
   display: flex;
 }
 
+@media (max-width: 699px) {
+  #slider-price-1:checked ~ .slider__toggles label[for="slider-price-1"],
+  #slider-price-2:checked ~ .slider__toggles label[for="slider-price-2"],
+  #slider-price-3:checked ~ .slider__toggles label[for="slider-price-3"] {
+    border-color: #283645;
+  }
+
+  #slider-price-1:checked ~ .price__list-container {
+    transform: translateX(0);
+  }
+
+  #slider-price-2:checked ~ .price__list-container {
+    transform: translateX(-33.3%);
+  }
+
+  #slider-price-3:checked ~ .price__list-container {
+    transform: translateX(-66.6%);
+  }
+}
+
+@media @tablet-widths {
+  .slider__toggles {
+    display: none;
+  }
+}
+
 @media @desktop-widths {
   .slider__toggles {
     display: none;
+  }
+
+  .slider__prev,
+  .slider__next {
+    display: block;
+    width: 41px;
+    height: 41px;
+
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    & svg {
+      opacity: 0.3;
+
+      transition: opacity 0.1s linear;
+
+      fill: @dark;
+      &:hover,
+      &:focus {
+        opacity: 0.6;
+      }
+      &:active {
+        opacity: 0.1;
+      }
+    }
   }
 }

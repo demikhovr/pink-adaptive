@@ -1,22 +1,18 @@
 .main-nav {
   position: relative;
-
-  width: auto;
 }
 
 .main-nav__menu {
   display: flex;
   justify-content: space-between;
-  box-sizing: border-box;
-  min-height: 69px;
-  padding: 22px 19px 25px 20px;
+  padding: 22px 19px 22px 20px;
 
   .container-fluid();
 }
 
 .main-nav__toggle {
   position: relative;
-  z-index: 2;
+  z-index: 25;
 
   display: block;
   width: 50px;
@@ -27,147 +23,169 @@
   cursor: pointer;
 }
 
+.main-nav__toggle::before,
+.main-nav__toggle::after, {
+  content: "";
+  position: absolute;
+  left: 50%;
+  z-index: 25;
+
+  width: 50px;
+  height: 4px;
+
+  background-color: @white;
+  transform: translate(-50%, -50%);
+
+  transition: top 0.5s ease, transform 0.5s ease, background-color 0.1s linear, box-shadow 0.1s linear, opacity 0.1s linear;
+}
+
+.main-nav__toggle::before {
+  top: 1px;
+
+  box-shadow: 0 10px 0 0 @white;
+}
+
+.main-nav__toggle::after {
+  top: ~"calc(100% - 1px)";
+}
+
+.main-nav__toggle:hover::before,
+.main-nav__toggle:focus::before {
+  background-color: @lipstick;
+  box-shadow: 0 10px 0 0 @lipstick;
+}
+
+.main-nav__toggle:hover::after,
+.main-nav__toggle:focus::after {
+  background-color: @lipstick;
+}
+
+.main-nav__toggle:active::before,
+.main-nav__toggle:active::after {
+  opacity: 0.3;
+}
+
+.main-nav--opened {
+  background-color: @dark;
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 45%;
+
+    width: 30px;
+    height: 4px;
+
+    background-color: @white;
+    border-radius: 3em;
+    box-shadow: none;
+    transform: translateY(-50%);
+
+    transition: top 0.5s ease, transform 0.5s ease , background-color 0.1s linear, box-shadow 0.1s linear, opacity 0.1s linear;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--opened .main-nav__toggle:hover::before,
+.main-nav--opened .main-nav__toggle:focus::before,
+.main-nav--opened .main-nav__toggle:hover::after,
+.main-nav--opened .main-nav__toggle:focus::after {
+  background-color: @lipstick;
+}
+
+.main-nav--opened .main-nav__toggle:active::before,
+.main-nav--opened .main-nav__toggle:active::after {
+  opacity: 0.3;
+}
+
+@keyframes showmenu {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 .main-nav__list {
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  background-color: @dark;
+  border-top: 1px solid @black;
 }
 
-@media (max-width: 1199px) {
-  .main-nav--closed .main-nav__toggle::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
+.main-nav__item a {
+  display: block;
+  padding: 16px 20px 15px;
 
-    width: 50px;
-    height: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  color: @white;
+  text-transform: uppercase;
+  text-decoration: none;
 
-    background-color: @white;
-    box-shadow: 0 10px 0 0 @white,
-    0 -10px 0 0 @white;
-    transform: translate(-50%, -50%);
-  }
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid @black;
+  outline: none;
 
-  .main-nav--closed .main-nav__toggle:hover::before,
-  .main-nav--closed .main-nav__toggle:focus::before {
-    background-color: @lipstick;
-    box-shadow: 0 10px 0 0 @lipstick,
-    0 -10px 0 0 @lipstick;
-  }
-
-  .main-nav--closed .main-nav__toggle:active::before {
-    opacity: 0.3;
-  }
-
-  .main-nav--opened {
-    background-color: @dark;
-  }
-
-  .main-nav--opened .main-nav__toggle {
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 0;
-
-      width: 36px;
-      height: 2px;
-
-      background-color: @white;
-      transform: translateY(-50%);
+  transition: color 0.1s linear;
+  &[href] {
+    &:hover,
+    &:focus {
+      color: @lipstick;
     }
-    &::before {
-      transform: rotate(45deg);
-    }
-    &::after {
-      transform: rotate(-45deg);
+    &:active {
+      color: rgba(210, 40, 86, 0.3);
     }
   }
+}
 
-  .main-nav--opened .main-nav__toggle:hover::before,
-  .main-nav--opened .main-nav__toggle:focus::before,
-  .main-nav--opened .main-nav__toggle:hover::after,
-  .main-nav--opened .main-nav__toggle:focus::after {
-    background-color: @lipstick;
-  }
+.main-nav--closed .main-nav__list {
+  display: none;
+}
 
-  .main-nav--opened .main-nav__toggle:active::before,
-  .main-nav--opened .main-nav__toggle:active::after {
-    opacity: 0.3;
-  }
+.main-nav--opened .main-nav__list {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 5;
 
-  .main-nav__list {
-    margin: 0;
-    padding: 0;
+  animation-name: showmenu;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
 
-    list-style: none;
-  }
+  animation-fill-mode: backwards;
+}
 
-  .main-nav__list {
-    font-weight: 700;
+.main-nav--nojs {
+  background: @dark;
+}
 
-    background-color: @dark;
-  }
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
 
-  .main-nav__item a {
-    display: block;
-    padding: 20px 20px 22px;
+.main-nav--nojs .main-nav__list {
+  position: static;
+}
 
-    font-size: 18px;
-    line-height: 32px;
-    text-align: center;
-    color: @white;
-    text-transform: uppercase;
-    text-decoration: none;
-
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    border-bottom: 1px solid @black;
-    outline: none;
-
-    transition: color 0.1s linear;
-    &[href] {
-      &:hover,
-      &:focus {
-        color: @lipstick;
-      }
-      &:active {
-        color: rgba(210, 40, 86, 0.3);
-      }
-    }
-  }
-
-  .main-nav--closed .main-nav__list {
-    display: none;
-  }
-
-  .main-nav--opened .main-nav__list {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    z-index: 10;
-  }
-
-  .main-nav--nojs {
-    background: @dark;
-  }
-
-  .main-nav--nojs .main-nav__toggle {
-    display: none;
-  }
-
-  .main-nav--nojs .main-nav__list {
-    position: static;
-
-    height: auto;
-  }
-
-  .main-nav--nojs .main-nav__item {
-    display: block;
-  }
+.main-nav--nojs .main-nav__item {
+  display: block;
 }
 
 @media @tablet-widths {
@@ -214,6 +232,7 @@
     text-decoration: none;
 
     outline: none;
+
     transition: opacity 0.1s linear;
     &::before {
       content: "";
