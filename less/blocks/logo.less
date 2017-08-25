@@ -1,28 +1,29 @@
 .logo {
+  width: 75px;
+  height: 22px;
+
   outline: none;
 }
 
-svg {
+.logo__img {
   transition: fill 0.1s linear, opacity 0.1s linear;
 
   fill: @white;
-}
-
-.logo svg {
   &:hover,
   &:focus {
     fill: @lipstick;
   }
   &:active {
-    fill: @white;
     opacity: 0.3;
+
+    fill: @white;
+  }
+  &--tablet,
+  &--desktop {
+    display: none;
   }
 }
 
-.logo-pink-white-tablet,
-.logo-pink-white-desktop {
-  display: none;
-}
 
 @media @tablet-widths {
   .logo-pink-white-mobile,

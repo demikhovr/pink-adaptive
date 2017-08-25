@@ -1,4 +1,162 @@
 .price {
-  background: #f2f2f2 url(../img/bg-triangle-white.svg) no-repeat center -30px;
+  padding-top: 92px;
+  padding-bottom: 49px;
+
   background-color: @grey;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 100% auto;
+}
+
+.price__wrapper {
+  padding: 0 20px;
+  overflow: hidden;
+
+  .container-fluid();
+}
+
+.price__list-container {
+  width: 300%;
+
+  transform: translate(-33.3%);
+
+  transition: transform 0.2s;
+}
+
+.price__list {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 37px;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: center;
+}
+
+.price__cell-header {
+  padding: 16px 88px 20px 89px;
+
+  color: @white;
+
+  background-color: @dark;
+  border-right: 2px solid #e5e5e5;
+  &:last-child {
+    border-right: none;
+  }
+  &--empty {
+    display: none;
+
+    color: transparent;
+
+    background-color: transparent;
+    border: none;
+  }
+  &--hit {
+    position: relative;
+
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    &::before {
+      content: "хит";
+      position: absolute;
+      top: 11px;
+      left: 11px;
+
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 30px;
+      text-transform: uppercase;
+
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.price__cell-header-title {
+  margin: 0;
+  margin-bottom: 2px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.price__cell-header-cost {
+  margin: 0;
+
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.price__cell {
+  padding: 13px 17px 16px 22px;
+
+  font-size: 14px;
+  line-height: 30px;
+  text-align: left;
+  text-transform: uppercase;
+
+  border: 2px solid #e5e5e5;
+
+  transition: transform 0.2s;
+  &--hidden {
+    display: none;
+  }
+}
+
+.price__cell-icon {
+  float: right;
+}
+
+.price__cell-icon--yes {
+  padding-top: 5px;
+
+  fill: #3dc644;
+}
+
+.price__cell-icon--no {
+  padding-right: 5px;
+
+  fill: #f25b26;
+}
+
+
+
+@media @tablet-widths {
+  .price__list-container {
+    width: auto;
+
+    transform: none;
+  }
+
+  .price__cell-header {
+    &--empty {
+      display: block;
+    }
+  }
+
+  .price__cell {
+    text-align: center;
+    &--hidden {
+      display: block;
+    }
+  }
+
+  .price__cell--empty span {
+    display: none;
+  }
+
+  .price__cell--empty svg {
+    float: none;
+  }
+}
+
+@media @desktop-widths {
+  .price__list-container {
+    width: auto;
+  }
 }
