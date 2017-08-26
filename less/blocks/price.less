@@ -1,7 +1,4 @@
 .price {
-  padding-top: 92px;
-  padding-bottom: 49px;
-
   background-color: @grey;
   background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
@@ -10,7 +7,7 @@
 }
 
 .price__wrapper {
-  padding: 0 20px;
+  padding: 92px 20px 49px;
   overflow: hidden;
 
   .container-fluid();
@@ -57,12 +54,12 @@
 
     background-image: url("../img/bg-hit.svg");
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: -1px -1px;
     &::before {
       content: "хит";
       position: absolute;
-      top: 11px;
-      left: 11px;
+      top: 10px;
+      left: 10px;
 
       font-weight: 700;
       font-size: 14px;
@@ -93,13 +90,14 @@
 }
 
 .price__cell {
-  padding: 13px 17px 16px 22px;
+  padding: 13px 17px 12px 22px;
 
   font-size: 14px;
   line-height: 30px;
   text-align: left;
   text-transform: uppercase;
 
+  background-color: @white;
   border: 2px solid #e5e5e5;
 
   transition: transform 0.2s;
@@ -124,34 +122,69 @@
   fill: #f25b26;
 }
 
-
-
 @media @tablet-widths {
+  .price__wrapper {
+    padding: 90px 0 68px 0;
+    overflow: visible;
+  }
+
   .price__list-container {
-    width: auto;
+    width: 100%;
 
     transform: none;
   }
 
+  .price__list {
+    margin: 0;
+  }
+
   .price__cell-header {
+    padding: 15px 33px 9px 33px;
     &--empty {
       display: block;
     }
+    &--hit {
+      background-position: -7px -7px;
+      &::before {
+        top: 3px;
+        left: 5px;
+      }
+    }
+  }
+
+  .price__cell-header-title {
+    margin-bottom: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .price__cell-header-cost {
+    font-size: 18px;
   }
 
   .price__cell {
-    text-align: center;
+    box-sizing: border-box;
+    min-width: 155px;
+    padding: 7px 15px 7px 15px;
+
+    text-align: left;
+    text-transform: capitalize;
     &--hidden {
-      display: block;
+      display: table-cell;
     }
   }
 
   .price__cell--empty span {
     display: none;
+
+    text-align: left;
   }
 
   .price__cell--empty svg {
+    display: block;
     float: none;
+    margin: 0 auto;
   }
 }
 

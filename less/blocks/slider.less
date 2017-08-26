@@ -13,11 +13,20 @@
   width: 6px;
   height: 6px;
 
-  background-color: #c2c6ca;
+  background-color: rgba(40, 54, 69, 0.3);
   background-clip: content-box;
   border: 3px solid transparent;
   border-radius: 50%;
   cursor: pointer;
+
+  transition: background-color 0.1s linear, border-color 0.1s linear;
+  &:hover,
+  &:focus {
+    background-color: rgba(40, 54, 69, 0.6);
+  }
+  &:active {
+    background-color: rgba(40, 54, 69, 0.1);
+  }
 }
 
 .slider__prev,
@@ -29,41 +38,47 @@
   display: none;
 }
 
-#slider-input-1:checked ~ .slider__toggles label[for="slider-input-1"],
-#slider-input-2:checked ~ .slider__toggles label[for="slider-input-2"],
-#slider-input-3:checked ~ .slider__toggles label[for="slider-input-3"] {
+#slider-reviews-1:checked ~ .slider__toggles--reviews label[for="slider-reviews-1"],
+#slider-reviews-2:checked ~ .slider__toggles--reviews label[for="slider-reviews-2"],
+#slider-reviews-3:checked ~ .slider__toggles--reviews label[for="slider-reviews-3"] {
+  background-color: transparent;
   border-color: #283645;
 }
 
-#slider-input-1:checked ~ .slider .slider__item:nth-child(1),
-#slider-input-2:checked ~ .slider .slider__item:nth-child(2),
-#slider-input-3:checked ~ .slider .slider__item:nth-child(3) {
+#slider-reviews-1:checked ~ .slider .slider__item:nth-child(1),
+#slider-reviews-2:checked ~ .slider .slider__item:nth-child(2),
+#slider-reviews-3:checked ~ .slider .slider__item:nth-child(3) {
   display: flex;
 }
 
-@media (max-width: 699px) {
-  #slider-price-1:checked ~ .slider__toggles label[for="slider-price-1"],
-  #slider-price-2:checked ~ .slider__toggles label[for="slider-price-2"],
-  #slider-price-3:checked ~ .slider__toggles label[for="slider-price-3"] {
-    border-color: #283645;
-  }
+#slider-price-1:checked ~ .slider__toggles label[for="slider-price-1"],
+#slider-price-2:checked ~ .slider__toggles label[for="slider-price-2"],
+#slider-price-3:checked ~ .slider__toggles label[for="slider-price-3"] {
+  border-color: #283645;
+  background-color: transparent;
+}
 
-  #slider-price-1:checked ~ .price__list-container {
-    transform: translateX(0);
-  }
+#slider-price-1:checked ~ .price__list-container {
+  transform: translateX(0);
+}
 
-  #slider-price-2:checked ~ .price__list-container {
-    transform: translateX(-33.3%);
-  }
+#slider-price-2:checked ~ .price__list-container {
+  transform: translateX(-33.3%);
+}
 
-  #slider-price-3:checked ~ .price__list-container {
-    transform: translateX(-66.6%);
-  }
+#slider-price-3:checked ~ .price__list-container {
+  transform: translateX(-66.6%);
 }
 
 @media @tablet-widths {
-  .slider__toggles {
+  .slider__toggles--price {
     display: none;
+  }
+
+  #slider-price-1:checked ~ .price__list-container,
+  #slider-price-2:checked ~ .price__list-container,
+  #slider-price-3:checked ~ .price__list-container {
+    transform: none;
   }
 }
 

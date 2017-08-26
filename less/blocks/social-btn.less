@@ -1,0 +1,30 @@
+.social-btn {
+  box-sizing: border-box;
+  width: 51px;
+  height: 51px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 3px solid rgba(40, 54, 69, 0.1);
+  border-radius: 50%;
+  outline: none;
+
+  transition: border-color 0.1s linear, opacity 0.1s linear;
+  &:hover,
+  &:focus {
+    border-color: rgba(40, 54, 69, 1);
+  }
+  &:active {
+    border-color: rgba(40, 54, 69, 0.4);
+    opacity: 0.3;
+  }
+  &--twitter {
+    background-image: url("../img/icon-twitter.svg");
+  }
+  &--facebook {
+    background-image: url("../img/icon-facebook.svg");
+  }
+  &--youtube {
+    background-image: url("../img/icon-youtube.svg");
+  }
+}
