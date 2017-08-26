@@ -22,6 +22,8 @@
 
 .promo__btn {
   display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
   margin-bottom: 33px;
   padding: 15px 35px 17px 36px;
 
@@ -60,6 +62,16 @@
   list-style: none;
 }
 
+.promo__download-item a {
+  outline: none;
+
+  transition: opacity 0.1s linear;
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+}
+
 .promo__download p {
   margin: 0;
 
@@ -84,7 +96,7 @@
     position: relative;
 
     box-sizing: border-box;
-    padding: 270px 0 84px 0;
+    padding: 203px 0 110px 0;
 
     .container-fluid();
   }
@@ -92,13 +104,14 @@
   .promo__title {
     display: block;
     box-sizing: border-box;
-    width: 300px;
+    width: 186px;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-left: 54px;
 
     font-weight: 300;
     font-size: 40px;
-    line-height: 40px;
+    line-height: 48px;
     text-align: center;
     color: @white;
   }
@@ -106,6 +119,14 @@
   .promo__download {
     width: 300px;
     padding: 0;
+  }
+
+  .promo__btn {
+    margin-bottom: 45px;
+  }
+
+  .promo__download-list {
+    margin-bottom: 30px;
   }
 
   .promo__download p {

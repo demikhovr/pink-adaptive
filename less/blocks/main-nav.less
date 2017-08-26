@@ -3,6 +3,8 @@
 }
 
 .main-nav__menu {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   padding: 22px 19px 22px 20px;
@@ -11,15 +13,19 @@
 }
 
 .main-nav__toggle {
-  position: relative;
+  position: absolute;
+  top: 51%;
+  right: 20px;
   z-index: 25;
 
   display: block;
   width: 50px;
+  height: 24px;
 
   background-color: transparent;
   border: none;
   outline: none;
+  transform: translateY(-50%);
   cursor: pointer;
 }
 
@@ -27,7 +33,6 @@
 .main-nav__toggle::after, {
   content: "";
   position: absolute;
-  left: 50%;
   z-index: 25;
 
   width: 50px;
@@ -36,17 +41,17 @@
   background-color: @white;
   transform: translate(-50%, -50%);
 
-  transition: top 0.5s ease, transform 0.5s ease, background-color 0.1s linear, box-shadow 0.1s linear, opacity 0.1s linear;
+  transition: width 0.5s ease, top 0.5s ease, transform 0.5s ease, background-color 0.1s linear, box-shadow 0.1s linear, opacity 0.1s linear;
 }
 
 .main-nav__toggle::before {
-  top: 1px;
+  top: 0;
 
   box-shadow: 0 10px 0 0 @white;
 }
 
 .main-nav__toggle::after {
-  top: ~"calc(100% - 1px)";
+  bottom: 0;
 }
 
 .main-nav__toggle:hover::before,
@@ -85,7 +90,7 @@
     box-shadow: none;
     transform: translateY(-50%);
 
-    transition: top 0.5s ease, transform 0.5s ease , background-color 0.1s linear, box-shadow 0.1s linear, opacity 0.1s linear;
+    transition: width 0.5s ease, top 0.5s ease, transform 0.5s ease , background-color 0.1s linear, box-shadow 0.1s linear, opacity 0.1s linear;
   }
   &::before {
     transform: rotate(45deg);
@@ -190,8 +195,12 @@
 
 @media @tablet-widths {
   .main-nav__menu {
-    min-height: 110px;
-    padding: 27px 0 42px;
+    padding: 27px 0 43px;
+  }
+
+  .main-nav__toggle {
+    top: 53%;
+    right: 0;
   }
 }
 
