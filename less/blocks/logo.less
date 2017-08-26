@@ -1,4 +1,7 @@
 .logo {
+  position: relative;
+  z-index: 25;
+
   width: 75px;
   height: 22px;
 
@@ -64,12 +67,23 @@
 }
 
 @media @desktop-widths {
-  .logo-pink-white-mobile,
-  .logo-pink-white-tablet {
-    display: none;
+  .logo__img {
+    &--desktop {
+      display: block;
+    }
+    &--mobile,
+    &--tablet {
+      display: none;
+    }
   }
 
-  .logo-pink-white-desktop {
-    display: block;
+  .logo--footer .logo__img {
+    fill: @dark;
+    &--tablet {
+      display: none;
+    }
+    &--desktop {
+      display: block;
+    }
   }
 }
