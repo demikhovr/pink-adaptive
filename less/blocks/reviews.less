@@ -89,13 +89,19 @@
 @media @desktop-widths {
   .reviews__wrapper {
     position: relative;
+
+    padding: 184px 0 5px;
+
+    background-image: url("../img/icon-quotes.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 72px;
   }
 
   .reviews__item {
     padding: 0 130px;
   }
 
-  .reviews__author {
+  .reviews__author-name {
     font-size: 24px;
   }
 
@@ -103,16 +109,20 @@
     font-size: 18px;
   }
 
+  .reviews__comment {
+    margin-bottom: 36px;
+  }
+
   .reviews__toggle {
     position: absolute;
-    top: 50%;
+    top: 56%;
 
     transform: translateY(-50%);
     &--left {
-      left: 0;
+      left: -10px;
     }
     &--right {
-      right: 0;
+      right: -10px;
     }
   }
 }

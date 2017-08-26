@@ -53,16 +53,19 @@
     background-repeat: no-repeat;
     transform: translateX(-50%);
   }
+
   &--fast {
     &::before {
       background-image: url("../img/advantage-1-illustration.svg");
     }
   }
+
   &--cool {
     &::before {
       background-image: url("../img/advantage-2-illustration.svg");
     }
   }
+
   &--expensive {
     &::before {
       background-image: url("../img/advantage-3-illustration.svg");
@@ -154,6 +157,7 @@
 
       transform: none;
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -165,9 +169,11 @@
 
       background-color: #4a4a4a;
     }
+
     &:last-child {
       margin-bottom: 0;
     }
+
     &:last-child::after {
       display: none;
     }
@@ -198,6 +204,7 @@
       height: 65px;
     }
   }
+
   .advantages__wrapper {
     padding-top: 79px;
     padding-bottom: 40px;
@@ -225,14 +232,17 @@
       padding-right: 61px;
       padding-left: 61px;
     }
+
     &:last-child {
       border-right: none;
     }
+
     &::before {
       left: 50%;
 
       transform: translateX(-50%);
     }
+
     &::after {
       display: none;
     }

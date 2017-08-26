@@ -2,7 +2,7 @@
   background-color: @grey;
   background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
-  background-position: center 0;
+  background-position: center -5px;
   background-size: 100% auto;
 }
 
@@ -169,7 +169,7 @@
     padding: 7px 15px 7px 15px;
 
     text-align: left;
-    text-transform: capitalize;
+    text-transform: inherit;
     &--hidden {
       display: table-cell;
     }
@@ -189,7 +189,38 @@
 }
 
 @media @desktop-widths {
-  .price__list-container {
-    width: auto;
+  .price__wrapper {
+    padding-top: 150px;
+    padding-bottom: 95px;
+  }
+
+  .price__cell-header {
+    padding: 16px 33px 20px 33px;
+    &--hit {
+      background-position: 0 0;
+      &::before {
+        top: 12px;
+        left: 10px;
+      }
+    }
+  }
+
+  .price__cell-header-title {
+    margin-bottom: 2px;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .price__cell-header-cost {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .price__cell {
+    min-width: 228px;
+    padding: 13px 21px 16px 21px;
+
+    font-size: 18px;
   }
 }
