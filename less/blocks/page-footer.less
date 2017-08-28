@@ -1,6 +1,44 @@
 .page-footer {
-  display: none;
+  &--index {
+    display: none;
+  }
 }
+
+.page-footer__wrapper {
+  padding-top: 35px;
+}
+
+.page-footer__logo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.page-footer__socials {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin: 0 71px;
+  margin-bottom: 32px;
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 128px;
+  margin: 0 auto;
+
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.page-footer__copyright-link {
+  margin-top: 6px;
+}
+
+
 
 @media @tablet-widths {
   .page-footer {

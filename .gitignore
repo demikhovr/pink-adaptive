@@ -6,4 +6,5 @@
 *.psd
 *.sublime*
 node_modules/
+build/
 Thumbs.db
