@@ -7,3 +7,4 @@
 *.sublime*
 node_modules/
 Thumbs.db
+build/
