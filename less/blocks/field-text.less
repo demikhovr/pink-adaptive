@@ -1,3 +1,7 @@
+.field-text {
+  display: flex;
+}
+
 .field-text__label {
   margin-bottom: 5px;
   margin-left: 22px;
@@ -15,8 +19,8 @@
 }
 
 .field-text__input {
+  flex-basis: 100%;
   box-sizing: border-box;
-  width: 100%;
   padding: 17px 20px 18px;
 
   font-size: 18px;
@@ -52,5 +56,46 @@
     padding: 14px 18px 14px;
 
     resize: none;
+  }
+}
+
+@media @tablet-widths {
+  .field-text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  .field-text__label {
+    margin-right: 19px;
+    margin-left: 0;
+  }
+
+  .field-text--contacts .field-text__label {
+    order: 2;
+    margin-bottom: 0;
+    margin-left: 19px;
+  }
+
+  .field-text__label-mobile {
+    display: none;
+  }
+
+  .field-text__label-tablet {
+    display: block;
+  }
+
+  .field-text__input {
+    flex-grow: 1;
+    flex-basis: auto;
+    &--textarea {
+      min-height: 193px;
+    }
+  }
+
+  .field-text--contacts .field-text__input {
+    flex-basis: 100%;
+    order: 1;
+    margin-bottom: 10px;
   }
 }
