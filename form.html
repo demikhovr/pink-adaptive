@@ -130,20 +130,20 @@
           <fieldset class="form__field  form__field--name">
             <legend class="visually-hidden">Укажите ваше ФИО:</legend>
             <p class="form__field-item  field-text">
-              <label class="field-text__label" for="name">Фамилия</label>
+              <label class="field-text__label" for="name">Фамилия:</label>
               <input class="field-text__input" type="text" name="surname" id="name" placeholder="Укажите фамилию">
             </p>
             <p class="form__field-item  field-text">
-              <label class="field-text__label" for="surname">Имя</label>
+              <label class="field-text__label" for="surname">Имя:</label>
               <input class="field-text__input" type="text" name="name" id="surname" placeholder="Введите ваше имя">
             </p>
             <p class="form__field-item  field-text">
-              <label class="field-text__label" for="patronymic">Отчество</label>
+              <label class="field-text__label" for="patronymic">Отчество:</label>
               <input class="field-text__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
             </p>
           </fieldset>
-          <div class="form__field-wrapper">
-            <fieldset class="form__field  form__field--achievments">
+          <div class="form__field-wrapper  form__field-wrapper--achievements">
+            <fieldset class="form__field  form__field--achievements">
               <legend class="form__field-title">Ваши безбашенные достижения в путешествии</legend>
               <p class="form__field-item  field-checkbox">
                 <input class="field-checkbox__input" type="checkbox" name="achieve-1" id="achieve-1" checked>
@@ -173,14 +173,14 @@
           </div>
           <fieldset class="form__field  form__field--contacts">
             <legend class="form__field-title  form__field-title--hidden">Контактная информация</legend>
-            <p class="form__field-item  field-text">
+            <p class="form__field-item  field-text  field-text--contacts">
               <label class="field-text__label" for="tel">
                 <span class="field-text__label-mobile">Номерок телефончика</span>
                 <span class="field-text__label-tablet">Номер телефона</span>
               </label>
               <input class="field-text__input" type="tel" name="tel" id="tel" placeholder="Номер, пожалуйста">
             </p>
-            <p class="form__field-item  field-text">
+            <p class="form__field-item  field-text  field-text--contacts">
               <label class="field-text__label" for="email">
                 <span class="field-text__label-mobile">Адресок почты</span>
                 <span class="field-text__label-tablet">Адрес почты</span>
@@ -188,7 +188,7 @@
               <input class="field-text__input" type="email" name="email" id="email" placeholder="E-mail, пожалуйста">
             </p>
           </fieldset>
-          <div class="form__field-wrapper">
+          <div class="form__field-wrapper  form__field-wrapper--apps">
             <fieldset class="form__field  form__field--apps">
               <legend class="form__field-title">С каким приложением путешествовали?</legend>
               <p class="form__field-item  field-radio">
@@ -207,10 +207,13 @@
           </div>
           <fieldset class="form__field  form__field--emotions">
             <legend class="form__field-title">Опишите свои эмоции</legend>
-            <textarea class="field-text__input  field-text__input--textarea" name="emotion" id="emotion" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <p class="field-text">
+              <textarea class="field-text__input  field-text__input--textarea" name="emotion" id="emotion" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+
+            </p>
           </fieldset>
           <div class="form__button-wrapper">
-            <button class="btn-form" type="submit">Отправить форму</button>
+            <button class="form__button  btn-form" type="submit">Отправить форму</button>
             <small class="form__notice"><sup>*</sup> — Обязательные поля</small>
           </div>
         </form>

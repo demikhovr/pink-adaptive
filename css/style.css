@@ -1440,6 +1440,20 @@ img {
 }
 .form__wrapper {
   padding: 45px 0 20px;
+  width: auto;
+}
+@media (min-width: 700px) {
+  .form__wrapper {
+    width: 88.6%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .form__wrapper {
+    width: 78.33%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
 }
 .form__descr {
   margin: 0 20px;
@@ -1455,7 +1469,7 @@ img {
   padding: 34px 20px 43px;
   border: none;
 }
-.form__field--achievments {
+.form__field--achievements {
   padding: 0 20px 6px;
 }
 .form__field--contacts {
@@ -1504,10 +1518,10 @@ img {
 .form__field-item:last-child {
   margin-bottom: 0;
 }
-.form__field--achievments .form__field-item {
+.form__field--achievements .form__field-item {
   margin-bottom: 52px;
 }
-.form__field--achievments .form__field-item:last-child {
+.form__field--achievements .form__field-item:last-child {
   margin-bottom: 0;
 }
 .form__field--apps .form__field-item {
@@ -1522,6 +1536,11 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+.form__button {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin: 0 20px 35px;
+}
 .form__notice {
   margin: 0 auto;
   font-size: 14px;
@@ -1533,6 +1552,138 @@ img {
   line-height: 16px;
   vertical-align: bottom;
   color: #d22856;
+}
+@media (min-width: 700px) {
+  .form__wrapper {
+    padding: 92px 0 20px;
+  }
+  .form__wrapper form {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .form__descr {
+    margin: 0 60px;
+    margin-bottom: 71px;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .form__descr span {
+    display: block;
+  }
+  .form__field {
+    margin: 0;
+    padding: 0;
+  }
+  .form__field--name {
+    -ms-flex-order: 1;
+        order: 1;
+    margin-bottom: 58px;
+  }
+  .form__field--contacts {
+    -ms-flex-order: 3;
+        order: 3;
+  }
+  .form__field--apps {
+    -ms-flex-order: 1;
+        order: 1;
+    margin-bottom: 57px;
+  }
+  .form__field--emotions {
+    -ms-flex-order: 5;
+        order: 5;
+  }
+  .form__field-wrapper {
+    padding: 0;
+    background-color: transparent;
+  }
+  .form__field-wrapper--achievements {
+    -ms-flex-order: 4;
+        order: 4;
+  }
+  .form__field-wrapper--apps {
+    -ms-flex-order: 2;
+        order: 2;
+  }
+  .form__field {
+    padding: 0 58px;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+  }
+  .form__field--name {
+    padding: 0;
+    border: none;
+  }
+  .form__field--contacts {
+    margin-bottom: 57px;
+    padding-bottom: 26px;
+  }
+  .form__field--apps {
+    padding-bottom: 59px;
+  }
+  .form__field--achievements {
+    margin-bottom: 57px;
+    padding-bottom: 53px;
+  }
+  .form__field--emotions {
+    margin-bottom: 67px;
+    padding-bottom: 33px;
+  }
+  .form__field-title {
+    width: auto;
+    padding: 0 25px;
+  }
+  .form__field-title--hidden {
+    display: block;
+  }
+  .form__field--apps .form__field-title {
+    margin-bottom: 48px;
+  }
+  .form__field--emotions .form__field-title {
+    margin-bottom: 17px;
+  }
+  .form__field--contacts .form__field-title {
+    margin-bottom: 37px;
+  }
+  .form__field--achievements .form__field-title {
+    margin-bottom: 48px;
+  }
+  .form__field--emotions .form__field-title {
+    margin-bottom: 19px;
+  }
+  .form__field-item {
+    margin-bottom: 52px;
+  }
+  .form__field--contacts .form__field-item {
+    margin-bottom: 29px;
+  }
+  .form__field--contacts .form__field-item:last-child {
+    margin-bottom: 0;
+  }
+  .form__button-wrapper {
+    -ms-flex-align: baseline;
+        align-items: baseline;
+    -ms-flex-order: 20;
+        order: 20;
+    margin-bottom: 30px;
+  }
+  .form__button {
+    -ms-flex-preferred-size: 48.3%;
+        flex-basis: 48.3%;
+    margin: 0;
+  }
+  .form__notice {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    margin: 0;
+    text-align: right;
+  }
+}
+.field-text {
+  display: -ms-flexbox;
+  display: flex;
 }
 .field-text__label {
   margin-bottom: 5px;
@@ -1547,8 +1698,9 @@ img {
   display: none;
 }
 .field-text__input {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   box-sizing: border-box;
-  width: 100%;
   padding: 17px 20px 18px;
   font-size: 18px;
   line-height: 18px;
@@ -1581,6 +1733,48 @@ img {
   min-height: 201px;
   padding: 14px 18px 14px;
   resize: none;
+}
+@media (min-width: 700px) {
+  .field-text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-align: baseline;
+        align-items: baseline;
+  }
+  .field-text__label {
+    margin-right: 19px;
+    margin-left: 0;
+  }
+  .field-text--contacts .field-text__label {
+    -ms-flex-order: 2;
+        order: 2;
+    margin-bottom: 0;
+    margin-left: 19px;
+  }
+  .field-text__label-mobile {
+    display: none;
+  }
+  .field-text__label-tablet {
+    display: block;
+  }
+  .field-text__input {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
+  .field-text__input--textarea {
+    min-height: 193px;
+  }
+  .field-text--contacts .field-text__input {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -ms-flex-order: 1;
+        order: 1;
+    margin-bottom: 10px;
+  }
 }
 .field-checkbox__input {
   display: none;
@@ -1648,6 +1842,11 @@ img {
 #achieve-6:checked + .field-checkbox__label:active::after {
   opacity: 0;
 }
+@media (min-width: 700px) {
+  .field-checkbox__label {
+    padding-left: 12%;
+  }
+}
 .field-radio__input {
   display: none;
 }
@@ -1710,11 +1909,14 @@ img {
 #windows:checked + .field-radio__label:active::after {
   opacity: 0;
 }
+@media (min-width: 700px) {
+  .field-radio__label {
+    padding-left: 12%;
+  }
+}
 .btn-form {
   display: inline-block;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  margin: 0 20px 35px;
+  width: auto;
   padding: 16px 40px 17px;
   font-weight: 700;
   font-size: 18px;
@@ -1777,9 +1979,14 @@ img {
     padding: 36px 0 37px;
     width: auto;
   }
+  .page-footer__logo {
+    margin: 0;
+  }
   .page-footer__socials {
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-preferred-size: 177px;
+        flex-basis: 177px;
     -ms-flex-pack: justify;
         justify-content: space-between;
     width: 177px;
@@ -1795,6 +2002,7 @@ img {
     -ms-flex-align: center;
         align-items: center;
     width: 129px;
+    margin: 0;
     margin-top: 5px;
     font-size: 14px;
     line-height: 18px;
