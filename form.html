@@ -125,96 +125,103 @@
     <section class="form">
       <div class="form__wrapper">
         <h2 class="visually-hidden">Заполните форму ниже:</h2>
-        <p class="form__descr">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span>Пожалуйста, заполните форму ниже:</span></p>
+        <p class="form__descr">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
         <form action="#" method="POST">
           <fieldset class="form__field  form__field--name">
             <legend class="visually-hidden">Укажите ваше ФИО:</legend>
-            <p class="form__field-item  field-text">
-              <label class="field-text__label" for="name">Фамилия:</label>
-              <input class="field-text__input" type="text" name="surname" id="name" placeholder="Укажите фамилию">
-            </p>
-            <p class="form__field-item  field-text">
-              <label class="field-text__label" for="surname">Имя:</label>
-              <input class="field-text__input" type="text" name="name" id="surname" placeholder="Введите ваше имя">
-            </p>
-            <p class="form__field-item  field-text">
-              <label class="field-text__label" for="patronymic">Отчество:</label>
-              <input class="field-text__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
-            </p>
+            <ul class="form__field-list">
+              <li class="form__field-item  field-text">
+                <label class="field-text__label" for="name">Фамилия:</label>
+                <input class="field-text__input" type="text" name="surname" id="name" placeholder="Укажите фамилию">
+              </li>
+              <li class="form__field-item  field-text">
+                <label class="field-text__label" for="surname">Имя:</label>
+                <input class="field-text__input" type="text" name="name" id="surname" placeholder="Введите ваше имя">
+              </li>
+              <li class="form__field-item  field-text">
+                <label class="field-text__label" for="patronymic">Отчество:</label>
+                <input class="field-text__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+              </li>
+            </ul>
           </fieldset>
           <div class="form__field-wrapper  form__field-wrapper--achievements">
             <fieldset class="form__field  form__field--achievements">
               <legend class="form__field-title">Ваши безбашенные достижения в путешествии</legend>
-              <p class="form__field-item  field-checkbox">
-                <input class="field-checkbox__input" type="checkbox" name="achieve-1" id="achieve-1" checked>
-                <label class="field-checkbox__label" for="achieve-1">Сделал селфи с акулой</label>
-              </p>
-              <p class="form__field-item  field-checkbox">
-                <input class="field-checkbox__input" type="checkbox" name="achieve-2" id="achieve-2" checked>
-                <label class="field-checkbox__label" for="achieve-2">Обгорел на пляже </label>
-              </p>
-              <p class="form__field-item  field-checkbox">
-                <input class="field-checkbox__input" type="checkbox" name="achieve-3" id="achieve-3">
-                <label class="field-checkbox__label" for="achieve-3">Видел Чака Норриса</label>
-              </p>
-              <p class="form__field-item  field-checkbox">
-                <input class="field-checkbox__input" type="checkbox" name="achieve-4" id="achieve-4">
-                <label class="field-checkbox__label" for="achieve-4">Накупил сувениров</label>
-              </p>
-              <p class="form__field-item  field-checkbox">
-                <input class="field-checkbox__input" type="checkbox" name="achieve-5" id="achieve-5" checked>
-                <label class="field-checkbox__label" for="achieve-5">Удержал башню</label>
-              </p>
-              <p class="form__field-item  field-checkbox">
-                <input class="field-checkbox__input" type="checkbox" name="achieve-6" id="achieve-6">
-                <label class="field-checkbox__label" for="achieve-6">Разгромил отель</label>
-              </p>
+              <ul class="form__field-list">
+                <li class="form__field-item  field-checkbox">
+                  <input class="field-checkbox__input" type="checkbox" name="achieve-1" id="achieve-1" checked>
+                  <label class="field-checkbox__label" for="achieve-1">Сделал селфи с акулой</label>
+                </li>
+                <li class="form__field-item  field-checkbox">
+                  <input class="field-checkbox__input" type="checkbox" name="achieve-2" id="achieve-2" checked>
+                  <label class="field-checkbox__label" for="achieve-2">Обгорел на пляже </label>
+                </li>
+                <li class="form__field-item  field-checkbox">
+                  <input class="field-checkbox__input" type="checkbox" name="achieve-3" id="achieve-3">
+                  <label class="field-checkbox__label" for="achieve-3">Видел Чака Норриса</label>
+                </li>
+                <li class="form__field-item  field-checkbox">
+                  <input class="field-checkbox__input" type="checkbox" name="achieve-4" id="achieve-4">
+                  <label class="field-checkbox__label" for="achieve-4">Накупил сувениров</label>
+                </li>
+                <li class="form__field-item  field-checkbox">
+                  <input class="field-checkbox__input" type="checkbox" name="achieve-5" id="achieve-5" checked>
+                  <label class="field-checkbox__label" for="achieve-5">Удержал башню</label>
+                </li>
+                <li class="form__field-item  field-checkbox">
+                  <input class="field-checkbox__input" type="checkbox" name="achieve-6" id="achieve-6">
+                  <label class="field-checkbox__label" for="achieve-6">Разгромил отель</label>
+                </li>
+              </ul>
             </fieldset>
           </div>
           <fieldset class="form__field  form__field--contacts">
             <legend class="form__field-title  form__field-title--hidden">Контактная информация</legend>
-            <p class="form__field-item  field-text  field-text--contacts">
-              <label class="field-text__label" for="tel">
-                <span class="field-text__label-mobile">Номерок телефончика</span>
-                <span class="field-text__label-tablet">Номер телефона</span>
-              </label>
-              <input class="field-text__input" type="tel" name="tel" id="tel" placeholder="Номер, пожалуйста">
-            </p>
-            <p class="form__field-item  field-text  field-text--contacts">
-              <label class="field-text__label" for="email">
-                <span class="field-text__label-mobile">Адресок почты</span>
-                <span class="field-text__label-tablet">Адрес почты</span>
-              </label>
-              <input class="field-text__input" type="email" name="email" id="email" placeholder="E-mail, пожалуйста">
-            </p>
+            <ul class="form__field-list">
+              <li class="form__field-item  field-text  field-text--contacts">
+                <label class="field-text__label" for="tel">
+                  <span class="field-text__label-mobile">Номерок телефончика</span>
+                  <span class="field-text__label-tablet">Номер телефона</span>
+                </label>
+                <input class="field-text__input" type="tel" name="tel" id="tel" placeholder="Номер, пожалуйста">
+              </li>
+              <li class="form__field-item  field-text  field-text--contacts">
+                <label class="field-text__label" for="email">
+                  <span class="field-text__label-mobile">Адресок почты</span>
+                  <span class="field-text__label-tablet">Адрес почты</span>
+                </label>
+                <input class="field-text__input" type="email" name="email" id="email" placeholder="E-mail, пожалуйста">
+              </li>
+            </ul>
           </fieldset>
           <div class="form__field-wrapper  form__field-wrapper--apps">
             <fieldset class="form__field  form__field--apps">
               <legend class="form__field-title">С каким приложением путешествовали?</legend>
-              <p class="form__field-item  field-radio">
-                <input class="field-radio__input" type="radio" name="apps" id="ios" value="ios" checked>
-                <label class="field-radio__label" for="ios">Pink для iOS</label>
-              </p>
-              <p class="form__field-item  field-radio">
-                <input class="field-radio__input" type="radio" name="apps" id="android" value="android">
-                <label class="field-radio__label" for="android">Pink на Android</label>
-              </p>
-              <p class="form__field-item  field-radio">
-                <input class="field-radio__input" type="radio" name="apps" id="windows" value="windows">
-                <label class="field-radio__label" for="windows">Windows Phone</label>
-              </p>
+              <ul class="form__field-list">
+                <li class="form__field-item  field-radio">
+                  <input class="field-radio__input" type="radio" name="apps" id="ios" value="ios" checked>
+                  <label class="field-radio__label" for="ios">Pink для iOS</label>
+                </li>
+                <li class="form__field-item  field-radio">
+                  <input class="field-radio__input" type="radio" name="apps" id="android" value="android">
+                  <label class="field-radio__label" for="android">Pink на Android</label>
+                </li>
+                <li class="form__field-item  field-radio">
+                  <input class="field-radio__input" type="radio" name="apps" id="windows" value="windows">
+                  <label class="field-radio__label" for="windows">Windows Phone</label>
+                </li>
+              </ul>
             </fieldset>
           </div>
           <fieldset class="form__field  form__field--emotions">
             <legend class="form__field-title">Опишите свои эмоции</legend>
-            <p class="field-text">
+            <p class="form__field-item  field-text">
               <textarea class="field-text__input  field-text__input--textarea" name="emotion" id="emotion" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-
             </p>
           </fieldset>
           <div class="form__button-wrapper">
             <button class="form__button  btn-form" type="submit">Отправить форму</button>
-            <small class="form__notice"><sup>*</sup> — Обязательные поля</small>
+            <small class="form__notice"><sup>*</sup> — Обязательные <span>для заполнения</span> поля</small>
           </div>
         </form>
       </div>
