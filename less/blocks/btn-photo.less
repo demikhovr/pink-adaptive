@@ -1,0 +1,59 @@
+.btn-photo {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 88px 17px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "OpenSans", Arial, sans-serif;
+  text-align: center;
+  color: @lipstick;
+
+  background-color: transparent;
+  border: 3px solid @lipstick;
+  border-radius: 3em;
+  outline: none;
+  cursor: pointer;
+
+  transition: border-color 0.1s linear, background-color 0.1s linear, color 0.1s linear;
+  &:hover,
+  &:focus {
+    color: @white;
+
+    background-color: @lipstick;
+  }
+  &:active {
+    color: fade(@white, 30%);
+  }
+  &--cancel {
+    margin-top: 12px;
+
+    color: fade(@dark, 10%);
+
+    border-color: fade(@dark, 10%);
+    &:hover,
+    &:focus {
+      color: fade(@dark, 30%);
+
+      background-color: transparent;
+      border-color: fade(@dark, 30%);
+    }
+    &:active {
+      color: fade(@white, 30%);
+
+      background-color: fade(@dark, 30%);
+      border-color: fade(@dark, 0%);
+    }
+  }
+}
+
+@media @tablet-widths {
+  .btn-photo {
+    padding-right: 70px;
+    padding-left: 70px;
+    &--cancel {
+      margin-top: 24px;
+    }
+  }
+}
