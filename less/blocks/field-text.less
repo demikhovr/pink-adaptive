@@ -18,6 +18,11 @@
   display: none;
 }
 
+.field-text__input-wrapper {
+  display: flex;
+  flex-basis: 100%;
+}
+
 .field-text__input {
   flex-basis: 100%;
   box-sizing: border-box;
@@ -85,18 +90,35 @@
     display: block;
   }
 
+  .field-text__input-wrapper {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 62px;
+      height: 100%;
+
+      background-color: #e5e5e5;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &--phone::before {
+      background-image: url("../img/icon-phone.svg");
+    }
+    &--email::before {
+      background-image: url("../img/icon-mail.svg");
+    }
+  }
+
   .field-text__input {
     flex-grow: 1;
     flex-basis: auto;
     &--textarea {
       min-height: 193px;
     }
-  }
-
-  .field-text--contacts .field-text__input {
-    flex-basis: 100%;
-    order: 1;
-    margin-bottom: 10px;
   }
 }
 
