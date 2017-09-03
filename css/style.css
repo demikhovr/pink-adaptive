@@ -2016,7 +2016,7 @@ img {
   border-radius: 2px;
 }
 .field-checkbox__label::after {
-  top: 50%;
+  top: 15px;
   left: 9px;
   width: 22px;
   height: 16px;
